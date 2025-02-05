@@ -1,4 +1,4 @@
-name: upload widget server pipe dockerhub
+name: upload widget server pipe docker hub
 
 on:
   push:
