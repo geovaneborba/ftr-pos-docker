@@ -1,10 +1,8 @@
 name: upload widget server pipe docker hub
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build:
     name: Build
