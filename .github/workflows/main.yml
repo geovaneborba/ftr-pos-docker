@@ -94,6 +94,7 @@ jobs:
           wait-for-service-stability-seconds: 180
 
       - name: App Runner Check
+        if: ${{ steps.deploy-app-runner.outputs.status == 'SUCCESS' }}
         id: app-runner-check
         run: echo "App running at ${{ steps.deploy-app-runner.outputs.service-url }}"
 
