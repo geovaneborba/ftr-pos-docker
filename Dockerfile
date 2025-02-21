@@ -13,7 +13,7 @@ COPY --from=dependencies /usr/src/app/node_modules ./node_modules
 RUN pnpm build
 RUN pnpm prune --prod
 
-FROM gcr.io/distroless/nodejs20-debian12 as deploy
+FROM gcr.io/distroless/nodejs20-debian12 AS deploy
 USER 1000
 WORKDIR /usr/src/app
 COPY --from=build /usr/src/app/dist ./dist
